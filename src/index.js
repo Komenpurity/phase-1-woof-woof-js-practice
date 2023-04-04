@@ -24,17 +24,22 @@ function displayDogBar(data){
         span.addEventListener("click", () => {
            // console.log("click")
            let dogInfo = document.getElementById("dog-info")
+                
                 dogInfo.innerHTML += `
                     <img src= ${dog.image} />
                     <h2>${dog.name}</h2>
-                    <button>${dog.isGoodDog}" </button>
+                    <button>${dog.isGoodDog} </button>
                 `
+                let button = dogInfo.querySelector("button") 
+
+                if(dog.isGoodDog === true) {
+                    button.innerText = "Good Dog"
+                } else { 
+                    button.innerText = "Bad Dog"
+                }
         })
     });  
     
 }
 
 
-function displayDogInfo(){
-    
-}
