@@ -23,7 +23,12 @@ function displayDogBar(data){
 
         span.addEventListener("click", () => {
            // console.log("click")
-           displayDogInfo() 
+           let dogInfo = document.getElementById("dog-info")
+                dogInfo.innerHTML += `
+                    <img src= ${dog.image} />
+                    <h2>${dog.name}</h2>
+                    <button>${dog.isGoodDog}" </button>
+                `
         })
     });  
     
